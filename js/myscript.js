@@ -1,11 +1,21 @@
+/**
+ * funzione in cui vengono inseriti, tramite un prompt, in un oggetto le proprietà: nome, cognome, età
+ */
+function inserisciProprieta(name,surname,age){
+    nuovoStudente.nome = name;
+    nuovoStudente.cognome = surname;
+    nuovoStudente.eta = age;
+}
+
 let studente = {
     nome: "Pinco",
     cognome: "Pallino",
     eta: 20
+
 };
 
 for(let key in studente){
-    console.log(key);
+    console.log(studente);
 };
 
 console.log(studente);
@@ -43,9 +53,15 @@ let nuovoStudente = {
     eta: undefined
 };
 
-nuovoStudente.nome = prompt("Inserisci il nome del nuovo studente");
-nuovoStudente.cognome = prompt("Inserisci il cognome del nuovo studente");
-nuovoStudente.eta = prompt("Inserisci l'età del nuovo studente");
+inserisciProprieta(
+    prompt("Inserisci il nome del nuovo studente"),
+    prompt("Inserisci il cognome del nuovo studente"),
+    prompt("Inserisci l'età del nuovo studente")
+);
+
+// nuovoStudente.nome = prompt("Inserisci il nome del nuovo studente");
+// nuovoStudente.cognome = prompt("Inserisci il cognome del nuovo studente");
+// nuovoStudente.eta = prompt("Inserisci l'età del nuovo studente");
 
 arrayStudenti.push(nuovoStudente);
 console.log(arrayStudenti);
