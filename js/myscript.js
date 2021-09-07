@@ -41,18 +41,20 @@ for(let i = 0; i < arrayStudenti.length; i++){
 /**
  * funzione che crea un nuovo studente
  */
-function creaOggettoStudente(){
+function creaOggettoStudente(name,surname,age){
     let nuovoStudente = {
-        nome: undefined,
-        cognome: undefined,
-        eta: undefined
+        nome: name,
+        cognome: surname,
+        eta: age
     }
-    nuovoStudente.nome = prompt("Inserisci il nome del nuovo studente");
-    nuovoStudente.cognome = prompt("Inserisci il cognome del nuovo studente");
-    nuovoStudente.eta = prompt("Inserisci l'età del nuovo studente");
+    
     return nuovoStudente;
 }
-let nuovoOggettoStudente = creaOggettoStudente();
+let nome = prompt("Inserisci il nome del nuovo studente");
+let cognome = prompt("Inserisci il cognome del nuovo studente");
+let eta = prompt("Inserisci l'età del nuovo studente");
+
+let nuovoOggettoStudente = creaOggettoStudente(nome,cognome,eta);
 // console.log(nuovoOggettoStudente);
 
 arrayStudenti.push(nuovoOggettoStudente);
