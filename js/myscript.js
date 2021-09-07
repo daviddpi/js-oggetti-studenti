@@ -6,7 +6,7 @@ let studente = {
 };
 
 for(let key in studente){
-    console.log(studente);
+    console.log(studente[key]);
 };
 
 console.log(studente);
